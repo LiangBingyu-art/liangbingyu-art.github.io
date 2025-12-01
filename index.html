@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>李健 - 个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 16px 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            padding: 28px 28px 32px;
+        }
+
+        /* 顶部区域 */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .avatar {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 32px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .header-main {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .name {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .tagline {
+            font-size: 15px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        .meta span + span::before {
+            content: "•";
+            margin: 0 8px;
+            color: #9ca3af;
+        }
+
+        /* section 标题 */
+        .section {
+            margin-bottom: 22px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 16px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+
+        .section-body {
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .pill {
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 12px;
+        }
+
+        /* 项目 / 经历 列表 */
+        .item {
+            margin-bottom: 12px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .item-sub {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+
+        .item-desc {
+            font-size: 13px;
+            color: #374151;
+        }
+
+        /* 底部社交 */
+        .footer {
+            border-top: 1px solid #e5e7eb;
+            margin-top: 20px;
+            padding-top: 12px;
+            font-size: 13px;
+            color: #6b7280;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                margin: 20px auto 32px;
+            }
+            .card {
+                padding: 20px 18px 24px;
+            }
+            .name {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="card">
+        <!-- 顶部个人信息 -->
+        <div class="header">
+            <div class="avatar">
+                <!-- 这里可以写你名字首字母，比如 李健 -->
+                YS
+            </div>
+            <div class="header-main">
+                <div class="name">李健</div>
+                <div class="tagline">
+                    研一｜金融 & 算法方向｜对推荐系统 / 风险建模有浓厚兴趣
+                </div>
+                <div class="meta">
+                    <span>中国科学技术大学 · MF</span>
+                    <span>所在地：上海 浦东新区</span>
+                    <span>邮箱：liangbyu@outlook.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关于我 -->
+        <div class="section">
+            <div class="section-title">关于我</div>
+            <div class="section-body">
+                <p>
+                    我目前就读于中国科学技术大学 MF 项目，方向偏金融科技 / 风险管理 / 算法。
+                    平时在做竞赛（信贷违约、期货期权比赛等）、Kaggle 项目和财务建模，
+                    希望未来往搜广推算法 / 金融风控建模方向发展。
+                </p>
+                <div class="pill-list">
+                    <span class="pill">机器学习 & 数据分析</span>
+                    <span class="pill">信用风险建模</span>
+                    <span class="pill">财务模型 & 估值</span>
+                    <span class="pill">Python / C / SQL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 经历 / 项目 -->
+        <div class="section">
+            <div class="section-title">项目 & 经历</div>
+            <div class="section-body">
+                <div class="item">
+                    <div class="item-title">信贷违约预测模型 · 金融科技创新大赛</div>
+                    <div class="item-sub">Python · XGBoost / LightGBM · 不平衡数据处理</div>
+                    <div class="item-desc">
+                        从零搭建完整的信贷违约预测建模流程，包括数据清洗、特征工程（构造时间跨度、行为序列、聚合统计特征等），并对不平衡数据进行专门处理（如过采样、集成式重采样等），
+                        模型层面尝试了多种集成算法（XGBoost / LightGBM / CatBoost 等），通过调参、交叉验证与模型融合逐步提升 AUC，显著改善小样本类别的识别能力。
+                        目前正在进一步完善项目，例如搭建可视化风险监控 dashboard、引入知识图谱构建更高阶客户关联特征，并计划将整个流程自动化为一个可复用的建模框架。
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-title">投行财务模型复现 · DCF & Multiples</div>
+                    <div class="item-sub">Excel / Python · 三大报表联动 · 估值分析</div>
+                    <div class="item-desc">
+                        跟随投行标准财务建模体系，从零搭建收入、成本、资本开支、折旧摊销、融资结构、营运资本等多张子表；将预测假设逐层传导至三大报表（IS / BS / CFS），实现完整可回溯的三表联动模型，
+                        在模型基础上进一步构建估值模块，包括 DCF（自由现金流折现）、Sensitivity Analysis（敏感性分析）和 Multiples（PE / PS / EV/EBITDA）对比。同时尝试使用 Python 自动化部分流程，如从 Wind/雪球等渠道批量抓取财务数据、生成预测假设、自动计算估值区间，并对模型结果进行一致性校验，提高模型复现效率与可扩展性。
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-title">Kaggle 项目（Titanic / 信贷风险等）</div>
+                    <div class="item-sub">特征工程 · 模型调参 · 交叉验证</div>
+                    <div class="item-desc">
+                        通过 Kaggle 入门、练习建模思路与指标分析，逐步从 baseline 提升到更稳定的模型表现，
+                        注重理解每个特征、每个参数的意义，而不是只追求分数。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 技能 -->
+        <div class="section">
+            <div class="section-title">技能</div>
+            <div class="section-body">
+                <ul>
+                    <li>编程：Python（pandas / sklearn / XGBoost / LightGBM）、C 语言、简单前端（HTML/CSS）</li>
+                    <li>数据：特征工程、模型评估（AUC / F1 / Recall）、不平衡数据处理（采样 / 集成）</li>
+                    <li>金融：期货期权基础、信用风险、财务报表分析、DCF / PE / PS 等估值方法</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 联系方式 -->
+        <div class="section">
+            <div class="section-title">联系我</div>
+            <div class="section-body">
+                <p>
+                    如果你对金融科技、算法学习、比赛组队或项目合作感兴趣，欢迎联系我。
+                </p>
+                <p>
+                    📮 邮箱：<a href="mailto:liangbyu@outlook.com">your_email@example.com</a><br />
+                    💬 微信：可以写“加我请备注来意”（Julian_Kai）
+                </p>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            <div>© <span id="year"></span> 李健 · Personal Site</div>
+            <div class="links">
+                <!-- 有就写，没有就删掉 -->
+                <!-- <a href="https://github.com/你的ID" target="_blank">GitHub</a> -->
+                <!-- <a href="https://www.kaggle.com/你的ID" target="_blank">Kaggle</a> -->
+                <!-- <a href="https://space.bilibili.com/你的ID" target="_blank">B 站</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
